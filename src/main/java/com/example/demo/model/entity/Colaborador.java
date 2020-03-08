@@ -27,6 +27,9 @@ public class Colaborador {
     @Column(length = 10485760)
     private String imagem;
 
+    @Column(name = "nome_imagem", length = 10485760)
+    private String nomeImagem;
+
     @ManyToOne
     @JoinColumn(name = "id_sexo", nullable = false)
     private Sexo sexo;

@@ -17,7 +17,7 @@ public interface ColaboradorRepository extends JpaRepository<Colaborador, Long> 
             + "AND (:nomeCompleto IS NULL OR :nomeCompleto = '' OR UPPER (c.nomeCompleto) LIKE CONCAT ('%',UPPER(:nomeCompleto),'%')) "
             + "AND (:cpf IS NULL OR :cpf = '' OR c.cpf = :cpf) "
             + "AND (:sexoId IS NULL OR c.sexo.id = :sexoId) "
-            + "AND (:cargoId IS NULL OR c.sexo.id = :cargoId) ")
+            + "AND (:cargoId IS NULL OR c.cargo.id = :cargoId) ")
     Page<Colaborador> findByFilter(
             final String nomeCompleto,
             final String cpf,

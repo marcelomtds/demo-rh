@@ -14,6 +14,7 @@ public class ColaboradorDTO {
     private LocalDate dataNascimento;
     private String cpf;
     private String imagem;
+    private String nomeImagem;
     private Long sexoId;
     private String sexoDescricao;
     private Long cargoId;
